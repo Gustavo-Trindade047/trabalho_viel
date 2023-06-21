@@ -1,0 +1,35 @@
+# Avaliação - Linguagem Python
+Gustavo trindade- 8061619
+
+
+## Operações morfológicas
+  Neste trabalho, o professor nos deu exemplos de operações morfológicas da biblioteca OpenCV, como erosão, dilatação, abertura, fechamento e gradiente. Essas operações são baseadas na forma da imagem e geralmente são usadas em imagens binárias. Elas requerem a imagem e um kernel como entrada, onde o kernel é uma espécie de elemento de estruturação que instrui a operação. Após importar as bibliotecas, definimos as imagens e o kernel. Foi necessário usar dois kernels, pois as operações de abertura e fechamento não funcionaram com uma matriz 5x5.
+
+
+### Erosão
+  A erosão é uma técnica utilizada para reduzir a espessura da imagem. Suponhamos que o fundo seja preto, representado pelo valor 0, enquanto a cor branca é representada pelo valor 1. Durante o processo de erosão, um elemento estruturante, chamado de núcleo, percorre a imagem. Se um ou mais pixels sob o núcleo forem iguais a 0, o pixel correspondente na imagem original será transformado em 0.
+
+
+### Dilatação
+  
+A dilatação é um método utilizado para aumentar a espessura da imagem. Assim como na erosão, o núcleo também percorre a imagem, porém, ao invés de erodir o pixel para 0, ele será incrementado para 1. Em ambos os casos, temos a variável "iterações" que define o número de vezes que a operação é aplicada.
+
+### Abertura
+  A abertura é uma transformação morfológica mais avançada. No entanto, para ser mais preciso, ela utiliza as operações conhecidas de erosão e dilatação. A abertura consiste em realizar uma operação de erosão seguida de uma operação de dilatação. Essa técnica é útil quando queremos remover ruídos do fundo da imagem.
+
+### Fechamento
+ o fechamento é a operação oposta da abertura e envolve uma operação de dilatação seguida de uma operação de erosão. Ele é utilizado quando queremos preencher buracos em um objeto na imagem.
+
+### Gradiente
+  O gradiente morfológico é uma operação que consiste na diferença entre uma dilatação e uma erosão. Essa técnica é especialmente útil quando se deseja obter o contorno da forma na imagem.
+
+
+### Referencias
+[OpenCV - Erosion](https://docs.opencv.org/3.4/d4/d86/group__imgproc__filter.html#gaeb1e0c1033e3f6b891a25d0511362aeb)\
+[OpenCV - Morphological Transformations](https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html)\
+[OpenCV - Gradient.](https://docs.opencv.org/4.x/d4/d86/group__imgproc__filter.html#ga67493776e3ad1a3df63883829375201f)\
+[OpenCV - Opening.](https://docs.opencv.org/4.x/d4/d86/group__imgproc__filter.html#ga67493776e3ad1a3df63883829375201f)\
+[OpenCV - Dilation.](https://docs.opencv.org/3.4/d4/d86/group__imgproc__filter.html#ga4ff0f3318642c4f469d0e11f242f3b6c)\
+[GeeksforGeeks - OpenCV Python Tutorial.](https://www.geeksforgeeks.org/opencv-python-tutorial/)\
+[OpenCV - Closing.](https://docs.opencv.org/4.x/d4/d86/group__imgproc__filter.html#ga67493776e3ad1a3df63883829375201f)\
+
